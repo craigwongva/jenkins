@@ -43,8 +43,8 @@ entries.each{ reponame, entry ->
     gh_repo: reponame,
     gh_org: entry.gh_org ? entry.gh_org : 'venicegeo',
     gh_branch: entry.branch ? entry.branch : 'master',
-    team: entry.team ? entry.team : 'piazza',
-    threadfix_id: entry.team == 'beachfront' ? '57' : '10',
+    team: entry.team ? entry.team : 'sandbox',
+    threadfix_id: entry.team == 'xxxxbeachfront' ? '57' : '10',
     slack_token: binding.variables.get("SLACK_TOKEN"),
     slack_domain: "venicegeo",
     pcf_org: "piazza",
@@ -276,7 +276,7 @@ entries.each{ reponame, entry ->
   def test_release_job
   def test_release_base
   def test_release_steps
-  if ((entry.team == 'piazza' || entry.team == 'beachfront' ) && entry.lib != true) {
+  if ((entry.team == 'sandbox' || entry.team == 'beachfront' ) && entry.lib != true) {
     // -- production pipeline
     folder("${config.jenkins_org}/${config.team}/${config.gh_repo}/production") {
       displayName("${config.gh_repo}/production")
@@ -499,19 +499,19 @@ entries.each{ reponame, entry ->
   }
 }
 
-
+/*
 // -- PIAZZA AGGREGATED ROLLOUT
-folder('venice/piazza/promotion') {
+folder('venice/sandbox/promotion') {
   displayName('promotion')
 }
 
-def production_rollout = workflowJob('venice/piazza/promotion/production')
+def production_rollout = workflowJob('venice/sandbox/promotion/production')
 
 def production_cps = ' '
 entries.each{ reponame, entry ->
-  if (entry.team == 'piazza' && entry.lib != true) {
+  if (entry.team == 'sandbox' && entry.lib != true) {
     production_cps = production_cps + """
-      build job: "venice/piazza/${reponame}/production/0-promote", wait: true
+      build job: "venice/sandbox/${reponame}/production/0-promote", wait: true
 """
   }
 }
@@ -525,13 +525,13 @@ production_rollout.with {
   }
 }
 
-def test_rollout = workflowJob('venice/piazza/promotion/test')
+def test_rollout = workflowJob('venice/sandbox/promotion/test')
 
 def test_cps = ' '
 entries.each{ reponame, entry ->
-  if (entry.team == 'piazza' && entry.lib != true) {
+  if (entry.team == 'sandbox' && entry.lib != true) {
     test_cps = test_cps + """
-      build job: "venice/piazza/${reponame}/test/0-promote", wait: true
+      build job: "venice/sandbox/${reponame}/test/0-promote", wait: true
 """
   }
 }
@@ -576,7 +576,7 @@ bf_production_rollout.with {
 // HACKS FOR INTEGRATION TESTS
 
 // pz integration test repo
-folder("venice/piazza/pztest-integration") {
+folder("venice/sandbox/pztest-integration") {
   displayName("pztest-integration")
 }
 
@@ -585,7 +585,7 @@ folder("venice/beachfront/bftest-integration") {
   displayName("bftest-integration")
 }
 
-pz_gh_integration_test_job = job("venice/piazza/pztest-integration/piazza")
+pz_gh_integration_test_job = job("venice/sandbox/pztest-integration/sandbox")
 
 new Base(
   jobject: pz_gh_integration_test_job,
@@ -641,4 +641,4 @@ bf_gh_integration_test_job.with {
     }
   }
 }
-
+*/
