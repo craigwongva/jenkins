@@ -14,6 +14,7 @@
 
 class Repos {
   static repos = [
+/*    
     [
       reponame: 'bf-api',
       team: 'beachfront',
@@ -247,5 +248,6 @@ class Repos {
       manual: ['archive', 'cf_push', 'cf_bg_deploy', 'cf_promote_to_stage', 'cf_promote_to_prod'],
       pipeline: ['archive', 'cf_push_int', 'cf_bg_deploy_int']
     ]
+*/
   ]
 }
