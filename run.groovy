@@ -14,7 +14,9 @@ def global_config = [
 
 def entries = [:]
 // rearrange the job list for processing.
+out.println "Starting 'p in repos' loop"
 for (p in repos) {
+  out.println "p is $p"
   entries[p.reponame] = [
     team: p.team,
     gh_org: p.gh_org,
@@ -36,9 +38,12 @@ for (p in repos) {
     }
   }
 }
+out.println "Ended 'p in repos' loop"
 
 // repo loop
+out.println "Starting entries.each loop"
 entries.each{ reponame, entry ->
+  out.println "reponame is $reponame, entry is $entry"
   def config = [
     gh_repo: reponame,
     gh_org: entry.gh_org ? entry.gh_org : 'venicegeo',
@@ -498,6 +503,7 @@ entries.each{ reponame, entry ->
     }
   }
 }
+out.println "Ended entries.each loop"
 
 /*
 // -- PIAZZA AGGREGATED ROLLOUT
