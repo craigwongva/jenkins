@@ -36,12 +36,12 @@ class Repos {
       team: 'beachfront',
       manual: ['sonar', 'archive', 'cf_push', 'cf_bg_deploy', 'cf_promote_to_stage', 'cf_promote_to_prod'],
       pipeline: ['sonar', 'archive', 'cf_push_int', 'zap', 'cf_bg_deploy_int', 'beachfront_integration_tests', 'cf_push_stage', 'cf_bg_deploy_stage']
-    ],[
+    ],*/[
       reponame: 'bf-ui',
       team: 'beachfront',
-      manual: ['sonar', 'archive', 'cf_push', 'cf_bg_deploy', 'cf_promote_to_stage', 'cf_promote_to_prod'],
-      pipeline: ['sonar', 'archive', 'cf_push_int', 'zap', 'cf_bg_deploy_int', 'beachfront_ua_tests_int', 'cf_push_stage', 'cf_bg_deploy_stage', 'beachfront_ua_tests_stage']
-    ],[
+      manual: [/*'sonar', 'archive', 'cf_push', 'cf_bg_deploy', 'cf_promote_to_stage', 'cf_promote_to_prod'*/],
+      pipeline: [/*'sonar', 'archive', 'cf_push_int', 'zap', 'cf_bg_deploy_int', 'beachfront_ua_tests_int', 'cf_push_stage', 'cf_bg_deploy_stage', 'beachfront_ua_tests_stage'*/]
+    ],/*[
       reponame: 'bftest-ui',
       team: 'beachfront',
       pipeline: ['selenium'],
@@ -121,12 +121,12 @@ class Repos {
       team: 'piazza',
       manual: ['gitlab_push'],
       pipeline: ['test', 'archive', 'cf_push_int', 'zap', 'cf_bg_deploy_int', 'run_integration_tests', 'cf_push_stage', 'cf_bg_deploy_stage', 'run_integration_tests_stage']
-    ],*/[
+    ],[
       reponame: 'pz-access',
       team: 'sandbox',
       manual: ['gitlab_push'],
-      pipeline: [/*'sonar', 'ionchannel_pom', 'archive', 'cf_push_int', 'zap', 'cf_bg_deploy_int', 'run_integration_tests', 'cf_push_stage', 'cf_bg_deploy_stage', 'run_integration_tests_stage'*/]
-    ],/*[
+      pipeline: ['sonar', 'ionchannel_pom', 'archive', 'cf_push_int', 'zap', 'cf_bg_deploy_int', 'run_integration_tests', 'cf_push_stage', 'cf_bg_deploy_stage', 'run_integration_tests_stage']
+    ],[
       reponame: 'pz-docs',
       team: 'piazza',
       manual: ['gitlab_push'],
