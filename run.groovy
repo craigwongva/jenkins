@@ -417,6 +417,9 @@ entries.each{ reponame, entry ->
     // -- end production
 */
     // -- load test pipeline
+    out.println "config.jenkins_org is ${config.jenkins_org}"
+    out.println "config.team ${config.team}"
+    out.println "config.gh_repo ${config.gh_repo}"
     folder("${config.jenkins_org}/${config.team}/${config.gh_repo}/test") {
       displayName("${config.gh_repo}/test")
     }
