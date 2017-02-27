@@ -285,7 +285,7 @@ entries.each{ reponame, entry ->
   out.println "config.team ${config.team}"
   out.println "config.gh_repo ${config.gh_repo}"
   out.println "entry.team ${entry.team}"
-  if ((entry.team == 'sandbox' || entry.team == 'xxxbeachfront' ) && entry.lib != true) {
+  if ((entry.team == 'sandfront' || entry.team == 'xxxbeachfront' ) && entry.lib != true) {
 /*
     // -- production pipeline
     folder("${config.jenkins_org}/${config.team}/${config.gh_repo}/production") {
