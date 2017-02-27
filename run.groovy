@@ -281,7 +281,8 @@ entries.each{ reponame, entry ->
   def test_release_job
   def test_release_base
   def test_release_steps
-  if ((entry.team == 'sandbox' || entry.team == 'beachfront' ) && entry.lib != true) {
+  if ((entry.team == 'sandbox' || entry.team == 'xxxbeachfront' ) && entry.lib != true) {
+/*
     // -- production pipeline
     folder("${config.jenkins_org}/${config.team}/${config.gh_repo}/production") {
       displayName("${config.gh_repo}/production")
@@ -414,7 +415,7 @@ entries.each{ reponame, entry ->
       }
     }
     // -- end production
-
+*/
     // -- load test pipeline
     folder("${config.jenkins_org}/${config.team}/${config.gh_repo}/test") {
       displayName("${config.gh_repo}/test")
@@ -467,7 +468,7 @@ entries.each{ reponame, entry ->
     }
     // -- end load test pipeline
   }
-
+/*
   // manual jobs
   if (entry.manual) {
     folder("${config.jenkins_org}/${config.team}/${config.gh_repo}/manual") {
@@ -502,8 +503,9 @@ entries.each{ reponame, entry ->
       manual_steps."${jobname}"()
     }
   }
+*/
 }
-out.println "Ended entries.each loop"
+out.println "Ended entries.each loop 88"
 
 /*
 // -- PIAZZA AGGREGATED ROLLOUT
