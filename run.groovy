@@ -281,6 +281,10 @@ entries.each{ reponame, entry ->
   def test_release_job
   def test_release_base
   def test_release_steps
+  out.println "config.jenkins_org is ${config.jenkins_org}"
+  out.println "config.team ${config.team}"
+  out.println "config.gh_repo ${config.gh_repo}"
+  out.println "entry.team ${entry.team}"
   if ((entry.team == 'sandbox' || entry.team == 'xxxbeachfront' ) && entry.lib != true) {
 /*
     // -- production pipeline
@@ -417,9 +421,6 @@ entries.each{ reponame, entry ->
     // -- end production
 */
     // -- load test pipeline
-    out.println "config.jenkins_org is ${config.jenkins_org}"
-    out.println "config.team ${config.team}"
-    out.println "config.gh_repo ${config.gh_repo}"
     folder("${config.jenkins_org}/${config.team}/${config.gh_repo}/test") {
       displayName("${config.gh_repo}/test")
     }
