@@ -432,7 +432,7 @@ entries.each{ reponame, entry ->
       config: config,
       jobname: "promote"
     ).init().git_checkout().job_script().cf_promote_to_test().create_properties_file()
-
+/*
     test_release_job = job("${config.jenkins_org}/${config.team}/${config.gh_repo}/test/1-release")
 
     test_release_base = new Base(
@@ -465,9 +465,10 @@ entries.each{ reponame, entry ->
         }
       }
     }
+*/
     // -- end load test pipeline
   }
-
+/*
   // manual jobs
   if (entry.manual) {
     folder("${config.jenkins_org}/${config.team}/${config.gh_repo}/manual") {
@@ -502,6 +503,7 @@ entries.each{ reponame, entry ->
       manual_steps."${jobname}"()
     }
   }
+*/
 }
 out.println "Ended entries.each loop"
 
