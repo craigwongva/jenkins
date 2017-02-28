@@ -83,7 +83,7 @@ entries.each{ reponame, entry ->
       base_job = new Base(
         jobject: mutant,
         config: [
-          gh_org: 'venicegeo',
+          gh_org: 'craigwongva',
           gh_repo: 'bftest-integration',
           gh_branch: 'master',
           slack_token: binding.variables.get("SLACK_TOKEN"),
@@ -97,7 +97,7 @@ entries.each{ reponame, entry ->
       base_job = new Base(
         jobject: mutant,
         config: [
-          gh_org: 'venicegeo',
+          gh_org: 'craigwongva',
           gh_repo: 'pztest-integration',
           gh_branch: 'master',
           slack_token: binding.variables.get("SLACK_TOKEN"),
@@ -113,7 +113,7 @@ entries.each{ reponame, entry ->
       base_job = new Base(
         jobject: mutant,
         config: [
-          gh_org: 'venicegeo',
+          gh_org: 'craigwongva',
           gh_repo: 'pztest-integration',
           gh_branch: 'master',
           slack_token: binding.variables.get("SLACK_TOKEN"),
@@ -127,7 +127,7 @@ entries.each{ reponame, entry ->
       base_job = new Base(
         jobject: mutant,
         config: [
-          gh_org: 'venicegeo',
+          gh_org: 'craigwongva',
           gh_repo: 'bftest-integration',
           gh_branch: 'master',
           slack_token: binding.variables.get("SLACK_TOKEN"),
@@ -142,7 +142,7 @@ entries.each{ reponame, entry ->
       base_job = new Base(
         jobject: mutant,
         config: [
-          gh_org: 'venicegeo',
+          gh_org: 'craigwongva',
           gh_repo: 'bftest-integration',
           gh_branch: 'master',
           slack_token: binding.variables.get("SLACK_TOKEN"),
@@ -173,7 +173,7 @@ entries.each{ reponame, entry ->
         jobject: mutant,
         slack_message: "      component: `\$component`\n      component_revision: `\$component_revision`",
         config: [
-          gh_org: 'venicegeo',
+          gh_org: 'craigwongva',
           gh_repo: 'pz-release',
           gh_branch: release_branch,
           slack_token: binding.variables.get("SLACK_TOKEN"),
@@ -312,7 +312,7 @@ entries.each{ reponame, entry ->
       jobject: release_job,
       slack_message: "      component: `\$component`\n      component_revision: `\$component_revision`",
       config: [
-        gh_org: 'venicegeo',
+        gh_org: 'craigwongva',
         gh_repo: 'pz-release',
         gh_branch: 'master',
         slack_token: binding.variables.get("SLACK_TOKEN"),
@@ -379,7 +379,7 @@ entries.each{ reponame, entry ->
       jobject: hotfix_release_job,
       slack_message: "      component: `\$component`\n      component_revision: `\$component_revision`",
       config: [
-        gh_org: 'venicegeo',
+        gh_org: 'craigwongva',
         gh_repo: 'pz-release',
         gh_branch: 'master',
         slack_token: binding.variables.get("SLACK_TOKEN"),
@@ -446,7 +446,7 @@ entries.each{ reponame, entry ->
       jobject: test_release_job,
       slack_message: "      component: `\$component`\n      component_revision: `\$component_revision`",
       config: [
-        gh_org: 'venicegeo',
+        gh_org: 'craigwongva',
         gh_repo: 'pz-release',
         gh_branch: 'test',
         slack_token: binding.variables.get("SLACK_TOKEN"),
@@ -605,7 +605,7 @@ pz_gh_integration_test_job = job("venice/sandbox/pztest-integration/sandbox")
 new Base(
   jobject: pz_gh_integration_test_job,
   config: [
-    gh_org: 'venicegeo',
+    gh_org: 'craigwongva',
     gh_repo: 'pztest-integration',
     gh_branch: 'master',
     slack_token: binding.variables.get("SLACK_TOKEN"),
@@ -628,7 +628,7 @@ bf_gh_integration_test_job = job("venice/beachfront/bftest-integration/beachfron
 new Base(
   jobject: bf_gh_integration_test_job,
   config: [
-    gh_org: 'venicegeo',
+    gh_org: 'craigwongva',
     gh_repo: 'bftest-integration',
     gh_branch: 'master',
     slack_token: binding.variables.get("SLACK_TOKEN"),
