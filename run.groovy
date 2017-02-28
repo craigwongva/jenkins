@@ -46,7 +46,7 @@ entries.each{ reponame, entry ->
   out.println "reponame is $reponame, entry is $entry"
   def config = [
     gh_repo: reponame,
-    gh_org: entry.gh_org ? entry.gh_org : 'venicegeo',
+    gh_org: entry.gh_org ? entry.gh_org : 'craigwongva', //'venicegeo',
     gh_branch: entry.branch ? entry.branch : 'master',
     team: entry.team ? entry.team : 'sandbox',
     threadfix_id: entry.team == 'xxxxbeachfront' ? '57' : '10',
