@@ -285,7 +285,7 @@ entries.each{ reponame, entry ->
   out.println "config.team ${config.team}"
   out.println "config.gh_repo ${config.gh_repo}"
   out.println "entry.team ${entry.team}"
-  if ((entry.team == 'sandfront' || entry.team == 'xxxbeachfront' ) && entry.lib != true) {
+  if ((entry.team == 'sandfront' || entry.team == 'beachfront' ) && entry.lib != true) {
 /*
     // -- production pipeline
     folder("${config.jenkins_org}/${config.team}/${config.gh_repo}/production") {
@@ -437,7 +437,7 @@ entries.each{ reponame, entry ->
       config: config,
       jobname: "promote"
     ).init().git_checkout().job_script().cf_promote_to_test().create_properties_file()
-    out.println("eisenhower")
+    out.println("truman")
 /*
     out.println("kennedy")
     test_release_job = job("${config.jenkins_org}/${config.team}/${config.gh_repo}/test/1-release")
